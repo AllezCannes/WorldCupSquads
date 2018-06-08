@@ -79,9 +79,9 @@ Players_df <- Players_df %>%
   mutate(Captain = if_else(str_detect(Player, "\\(c\\)"), "Captain", ""), #Add a captain variable if "(c)" is in the player's name.
          Player = Player %>% str_remove("\\(c\\)") %>% str_trim(), #Removing the "(c)" from the player's name and any whitespace.
          `Date of birth (age)` = `Date of birth (age)` %>% str_replace("^\\(\\d{4}-\\d{2}-\\d{2}\\)", "") %>% str_trim(), #Removing the "(yyyy-mm-dd)" part in this field
-         Player = Player %>% str_replace("\\[[^]]*\\]", "") %>% str_trim(), #Remove footnotes
-         Club = Club %>% str_replace("\\[[^]]*\\]", "") %>% str_trim(), #Remove footnotes
-         Height = Height %>% str_replace("\\[[^]]*\\]", "") %>% str_trim(), #Remove footnotes
+         Player = Player %>% str_remove("\\[[^]]*\\]") %>% str_trim(), #Remove footnotes
+         Club = Club %>% str_remove("\\[[^]]*\\]") %>% str_trim(), #Remove footnotes
+         Height = Height %>% str_remove("\\[[^]]*\\]") %>% str_trim(), #Remove footnotes
          `Place of birth` = `Place of birth` %>% str_remove("\\[[^]]*\\]") %>% str_trim(), #Remove footnotes
          `Playing position` = `Playing position` %>% str_remove("\\[[^]]*\\]") %>% str_trim()) %>% #Remove footnotes
   separate(Club, c("Club", "club_delete"), sep = "\\[", extra = "merge", fill = "right") %>% #Remove footnotes for those that didn't work above for some reason

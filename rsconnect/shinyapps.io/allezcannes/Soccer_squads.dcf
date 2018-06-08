@@ -5,8 +5,8 @@ account: allezcannes
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 357430
-bundleId: 1418155
+bundleId: 1419307
 url: https://allezcannes.shinyapps.io/Soccer_squads/
-when: 1528435530.76271
+when: 1528476014.05801
 asMultiple: FALSE
 asStatic: FALSE

@@ -81,7 +81,7 @@ server <- function(input, output, session) {
     if (input$countries == "All countries") {
       flagIcon
     } else {
-      flagIcon$iconUrl <- rep(paste0("Country_flags/", str_replace_all(input$countries, "_", " "), ".png"), 23)
+      flagIcon$iconUrl <- rep(paste0("Country_flags/", str_replace_all(input$countries, " ", "_"), ".png"), 23)
     }
     flagIcon
   })
