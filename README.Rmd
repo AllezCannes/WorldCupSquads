@@ -15,7 +15,7 @@ Note that I only know what Wikipedia knows. This means that the accuracy of the 
 
 All work was done in R, a free and open-sourced programming language used for data analysis and visualization. In the spirit of open-sourced software, I've provided all my code in [this github repository](https://github.com/AllezCannes/WorldCupSquads). If you want to run the code on your own computer, you can download R [here](https://cran.r-project.org/), and I highly suggest using the R Studio IDE, available for download [here](https://www.rstudio.com/products/rstudio/download/#download). 
 
-Most of the code is located [here](https://github.com/AllezCannes/WorldCupSquads/blob/master/Extracting_WC_Players.r), and the code that powers the application linked above can be found [here](https://github.com/AllezCannes/WorldCupSquads/blob/master/app.R). 
+The code used to scrape and clean the data is located [here](https://github.com/AllezCannes/WorldCupSquads/blob/master/Extracting_WC_Players.r), and the code that powers the application linked above can be found [here](https://github.com/AllezCannes/WorldCupSquads/blob/master/app.R). 
 
 The "Extracting WC Players" file goes through the following process:
 
