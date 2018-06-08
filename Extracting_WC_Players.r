@@ -121,10 +121,11 @@ locations_df <- distinct(Players_df, location_lookup)
 locations_df <- mutate_geocode(locations_df, location_lookup, source = "google", output = "latlon") #Get lon/lat for places of birth
 
 locations_df_missed <- locations_df %>% #Issues with the API limitations lead to some cities missed. 
-  filter(is.na(lon)) %>%  #The next few lines repeat the process and then re-merge the locations
+  filter(is.na(lon)) %>%  
   select(-lon, -lat) %>% 
   mutate_geocode(location_lookup, source = "google", output = "latlon")
 
+#The next few lines repeat the process and then re-merge the locations
 locations_df_missed2 <- locations_df_missed %>% 
   filter(is.na(lon)) %>% 
   select(-lon, -lat) %>% 
