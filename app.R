@@ -1,11 +1,9 @@
 library(shiny)
 library(shinyWidgets)
 library(leaflet)
-library(readr)
-library(dplyr)
+library(tidyverse)
 
 Players_df <- read_rds("Players_df.rds")
-Countries_df <- read_rds("Countries_df.rds")
 
 flagIcon <- makeIcon(
   iconUrl = case_when(
@@ -83,7 +81,7 @@ server <- function(input, output, session) {
     if (input$countries == "All countries") {
       flagIcon
     } else {
-      flagIcon$iconUrl <- rep(paste0("Country_flags/", input$countries, ".png"), 23)
+      flagIcon$iconUrl <- rep(paste0("Country_flags/", str_replace_all(input$countries, "_", " "), ".png"), 23)
     }
     flagIcon
   })
