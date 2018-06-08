@@ -1,0 +1,12 @@
+name: Soccer_squads
+title: Soccer_squads
+username:
+account: allezcannes
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 357430
+bundleId: 1418155
+url: https://allezcannes.shinyapps.io/Soccer_squads/
+when: 1528435530.76271
+asMultiple: FALSE
+asStatic: FALSE
