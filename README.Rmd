@@ -7,6 +7,8 @@ output: github_document
 
 In anticipation of the FIFA 2018 Men's World Cup, I decided to challenge my R skills with a small project: Create an application that maps out the birth location of all the players participating in the tournament. The application is located [here](https://allezcannes.shinyapps.io/Soccer_squads/). The data was scraped on June 5, 2018, and could be subject to change until June 13, 2018.
 
+The app is simple to use: Each marker shown indicates a player born in that location representing the national squad of the corresponding flag. You can select a particular country using the drop down (or the search bar) on the top right of the webpage to look at that squad's players. Hover on a marker to see the player's name, and click on it to get more information about him. Click on "more info" to be redirected to the player's Wikipedia page. Zoom in and out of the map, as some players are born in the same city, and their markers can therefore be clustered close together.
+
 The application is hosted on <http://www.shinyapps.io> for free. The app will disable after 25 hours per month of usage. My apologies if it takes off and the app is given the proverbial hug of death.
 
 Note that I only know what Wikipedia knows. This means that the accuracy of the information listed is only as good as Wikipedia. Specifically, some players (notably Saudi and a couple of South Korean players) do not have their birth city shown on Wikipedia. In those cases, I just picked the center of the country. 
